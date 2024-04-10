@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorted Files</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Sorted Files</h1>
+      <ul id="sortedFileList">
+        {% for category, files in sorted_files.items() %}
+        <li>{{ category }}</li>
+        <ul>
+          {% for file in files %}
+          <li>{{ file }}</li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="sorted_files.js"></script>
+  </body>
+</html>

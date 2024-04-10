@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scraping and Sorting App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Scraping and Sorting App</h1>
+      <form action="/scrape" method="post">
+        <div class="form-group">
+          <label for="genre">Enter the genre you want:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="genre"
+            name="genre"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Scrape and Download
+        </button>
+      </form>
+      <hr />
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Downloaded Files</h3>
+          <a href="/files" class="btn btn-secondary">View Downloads</a>
+          <a href="/deleteDownloads" class="btn btn-danger"
+            >Delete Downloads Directory</a
+          >
+        </div>
+        <div class="col-md-4">
+          <h3>Sort Files</h3>
+          <a href="/sort" class="btn btn-secondary">Sort Files</a>
+        </div>
+        <div class="col-md-4">
+          <h3>Sorted Files</h3>
+          <a href="/sorted_files" class="btn btn-secondary"
+            >View Sorted Files</a
+          >
+          <a href="/deleteSortedFiles" class="btn btn-danger"
+            >Delete Sorted Directory</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scraping and Sorting App</title>
+  </head>
+  <body>
+    <h1>Scraping and Sorting App</h1>
+    <form action="/scrape" method="post">
+      <label for="genre">Enter the genre you want:</label>
+      <input type="text" id="genre" name="genre" />
+      <button type="submit">Scrape and Download</button>
+    </form>
+    <br />
+
+    <div class="container mt-5">
+      <h1 class="mb-4">Downloaded Files</h1>
+      <ul id="fileList"></ul>
+    </div>
+
+    <a href="/files"><button>downloads</button></a>
+    <br />
+    <a href="/sort"><button>Sort Files</button></a>
+    <br />
+    <a href="/sorted_files"><button>Sorted Files</button></a>
+    <br />
+    <a href="/deleteDownloads"><button>Delete Downloads Directory</button></a>
+
+    <a href="/deleteSortedFiles"><button>Delete Sorted Directory</button></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html> -->
